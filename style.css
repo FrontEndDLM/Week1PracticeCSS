@@ -1,0 +1,192 @@
+/*this is how you comment out code*/
+/*the words will not show on the website*/
+
+h1 {
+  background-color: blanchedalmond;
+  color: rgb(131, 214, 214, 0.5);
+}
+
+div {
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+  background-color: aqua;
+  border: 10px double black;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  /*tag*/
+  /*div takes up the whole line as a block, and span runs on the same line (inline)*/
+}
+
+p {
+  color: brown !important;
+  /*only use !important once in your code, so it won't look messy*/
+  /*the absolute highest priority, over id*/
+  /*the color aliceblue for title was overrided*/
+  /*p is also a block that seperates the text with a margin, and span runs inline*/
+}
+
+.green {
+  color: green;
+  /*class*/
+}
+
+#title {
+  font-weight: lighter;
+  font-size: xx-large;
+  color: aliceblue;
+  /*id*/
+}
+
+section {
+  height: 300px;
+  border: solid palevioletred;
+}
+
+p {
+  color: blueviolet;
+  /*overrides the first p*/
+  /*Using " !important " overrides this*/
+  /*the color of the text in the paragraph will change to blueviolet if !important isn't there*/
+}
+
+/*the color of <p class="green"> under index.html would be green if !important wasn't there*/
+
+.box {
+  width: 200px;
+  height: 200px;
+  border: 15px solid red;
+  background-color: green;
+  padding: 15px 15px 15px 15px;
+  /*top right bottom left*/
+  /*like a clock*/
+  margin: 15px;
+  /*if all the sides are the same, coding only 1 pixel size is ok*/
+  box-sizing: content-box;
+  /*box-sizing: border-box; 
+    shrinks the size of the box to smaller than 200px, making it too small to fit all of the text
+    the border box includes the content, padding, and the border that surrounds it
+    using the border box size is the most efficient way per David because it looks nicer in the final product/website*/
+  /*refer to firebase.google.com as an example of how margins are used
+the website uses padding to increase the size of the buttons and click range*/
+  transition: background-color 300ms;
+  /*prepares the box for the hover effect; provides a smooth color change*/
+}
+
+.box:hover {
+  background-color: blue;
+  /*the green part of the box turns blue when The mouse hovers over*/
+  /*the red border stays*/
+  /*this is an example of a pseudo class*/
+  /*a pseudo element has 2 colons :: followed by before or after in CSS*/
+}
+
+.yellow {
+  background-color: yellow;
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  /*lifts the 2nd section by 10px and to the right by 10px*/
+  /*using absolute instead of relative will make the section move from it's position between sections first and footer*/
+}
+
+.child {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjyY65vGMHD56fjbx-XoRPXvbui58B62xCrA&s);
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  /*places the image to the top right of the yellow section (its parent)*/
+}
+
+.white {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  box-sizing: border-box;
+  /*fixes the footer to the bottom of the page/website at all times*/
+  /*you can create the header by fixing it to the top of the webpage*/
+  /*hamburger menus are placed at fixed positions*/
+  /*fixed positions can also be used in the body of the page to docorate the background with animations*/
+  /*without the white class, the footer would be under the yellow section*/
+  /*using sticky instead of fixed would fix the footer at the bottom of the screen until it reaches it's threshold under the yellow section*/
+}
+
+button {
+    transition: all 300ms;
+    /*transform: translate(10px, 10px);
+    transform: translate(x,y); x is horizontal and y is vertical
+    it's moving the position of the button down 10px and 10px to the right*/
+    animation: custom_animation_name 2s infinite alternate-reverse;
+    /*animation: name time duration alternate-reverse;
+    altnernate reverse is used so the animation will be smooth instead of jerky;
+    the duration can be infinite or set to a specific number of times ex.) 3*/
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.nav__link {
+    color: black;
+    /*BEM example 2*/
+}
+
+.nav__link--active {
+    font-weight: bold;
+    color: blue;
+    /*BEM example 1*/
+}
+
+@media (max-width: 992px) {
+  /*desktop width*/
+  div {
+    font-size: 14.5px;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  /*tablet width*/
+  div {
+    font-size: 13.5px;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 576px) {
+  /*mobile phone width*/
+  div {
+    font-size: 12px;
+    width: 80vw;
+  }
+  section {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 17px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 13px;
+  }
+}
+
+@keyframes custom_animation_name {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+    /*notates the movement at the beginning and end of the animation*/
+}

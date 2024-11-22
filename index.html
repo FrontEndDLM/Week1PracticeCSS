@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <nav class="nav">
+        <a href="https://frontendsimplified.com/" target="_blank" class="nav__link nav__link--active">Home</a>
+        <a href="" class="nav__link">About</a>
+        <a href="" class="nav__link">Contact Us</a>
+    </nav>
+
+<button>
+    Contrast
+</button>
+
+    <style>
+      h2 {
+        color: palevioletred;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: blueviolet">
+      My name is Davida - Style Method 1 (Inline CSS)
+    </h1>
+    <h2>Welcome to my page - Style Method 2 (Internal CSS)</h2>
+    <h3 style="color: #d4af37">Hex Code Color</h3>
+    <h1>Opague - Style Method 3 (External CSS)</h1>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad et quo
+        odit blanditiis corrupti nostrum voluptas sequi cupiditate provident
+        quod officia odio ipsa repudiandae at dicta quaerat, nisi consectetur.
+      </p>
+      <p>
+        The border can be solid, dotted, double, dashed, etc. Enter
+        "border-style" for the full list. The number of pixels determines the
+        border thickness.
+      </p>
+      <li>"height: 80vh" means 80% view height</li>
+      <li>"width: 80vw" means 80% view width</li>
+      <li>adjusts to the size of the website</li>
+      <p>Font-weight: determines how thick/bold the text is.</p>
+      <p>
+        Specificity - the most recent code determines the higher priority of
+        style
+      </p>
+      <p class="green">
+        class - specifies which element (ex. paragraph) style should be changed
+      </p>
+      <li class="green">class has a higher priority over specificity</li>
+      <li class="green">
+        ex: .green would have a higher priority over the designated p style of
+        the color blueviolet, even if the p style code came after the green
+      </li>
+      <p id="title">id has the highest priority of them all</p>
+      <li>besides !important (turned all p text brown)</li>
+      <li>can only be used once</li>
+    </div>
+    <section id="first">
+      <h1>First Section (Using h1 font style)</h1>
+      <p>this seperate section has a height of 300px</p>
+      <a href="#second">Go to the second section</a>
+    </section>
+    <section id="second" class="yellow">
+      <h2>Second Section (using h2 font style)</h2>
+      <p>second section also at 300px</p>
+      <a href="#footer">Go to the footer</a>
+      <div class="child"></div>
+    </section>
+    <section id="footer" class="white">
+      <h1>Footer</h1>
+      <p class="green">this is the footer</p>
+      <a href="#first">Back to the first section</a>
+      <p>
+        **Use the
+        <a href="https://frontendsimplified.com/" target="_blank"
+          >Frontend Simplified Website</a
+        >
+        as a reference to see how the sections work.**
+      </p>
+    </section>
+    
+  </body>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+      necessitatibus ducimus repudiandae ad, consequatur eveniet, incidunt
+      eligendi omnis sequi quae voluptatibus quam animi impedit, enim molestias.
+      Consequuntur officiis quidem impedit?
+    </div>
+  </body>
+</html>
